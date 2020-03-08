@@ -22,6 +22,13 @@ public class ExampleResource {
         return example.greeting(name);
     }
 
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("/greeting/fromConfig")
+    public String fromConfig() {
+        return example.nameConfig();
+    }
+
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
